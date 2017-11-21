@@ -6,29 +6,29 @@ version: 0.1
 platforms: [ esp32 ]
 
 sources:
-	- src/${arch}/3rd-party/bluedroid/decoder/srce
-	- src/${arch}/3rd-party/bluedroid/encoder/srce
-	- src/${arch}/3rd-party/hxcmod-player
-	- src/${arch}/3rd-party/hxcmod-player/mods
-	- src/${arch}/src/ble/gatt-service
-	- src/${arch}/src/ble
-	- src/${arch}/src/classic
-	- src/${arch}/src/
-	- src/${arch}/platform/freertos
+  - src/${arch}/3rd-party/bluedroid/decoder/srce
+  - src/${arch}/3rd-party/bluedroid/encoder/srce
+  - src/${arch}/3rd-party/hxcmod-player
+  - src/${arch}/3rd-party/hxcmod-player/mods
+  - src/${arch}/src/ble/gatt-service
+  - src/${arch}/src/ble
+  - src/${arch}/src/classic
+  - src/${arch}/src/
+  - src/${arch}/platform/freertos
   - src/${arch}
 includes:
-	- src/${arch}/3rd-party/bluedroid/decoder/include
-	- src/${arch}/3rd-party/bluedroid/encoder/include
-	- src/${arch}/3rd-party/hxcmod-player
-	- src/${arch}/3rd-party/hxcmod-player/mods
-	- src/${arch}/src/classic
-	- src/${arch}/src/ble/gatt-service
-	- src/${arch}/src/ble
-	- src/${arch}/src/classic
-	- src/${arch}/src
-	- src/${arch}/platform/embedded
-	- src/${arch}/platform/freertos
-	- src/${arch}/include
+  - src/${arch}/3rd-party/bluedroid/decoder/include
+  - src/${arch}/3rd-party/bluedroid/encoder/include
+  - src/${arch}/3rd-party/hxcmod-player
+  - src/${arch}/3rd-party/hxcmod-player/mods
+  - src/${arch}/src/classic
+  - src/${arch}/src/ble/gatt-service
+  - src/${arch}/src/ble
+  - src/${arch}/src/classic
+  - src/${arch}/src
+  - src/${arch}/platform/embedded
+  - src/${arch}/platform/freertos
+  - src/${arch}/include
 
 config_schema:
   - ["bt", "o", {title: "Bluetooth settings"}]
