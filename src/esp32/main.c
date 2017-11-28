@@ -350,7 +350,7 @@ static void packet_handler (uint8_t packet_type, uint16_t channel, uint8_t *pack
 extern int btstack_main(int argc, const char * argv[]);
 
 // main
-int app_main(void){
+int mgos_mongoose_os_lib_btstack_init(void){
 
     printf("BTstack: setup\n");
 
