@@ -349,8 +349,8 @@ static void packet_handler (uint8_t packet_type, uint16_t channel, uint8_t *pack
 
 extern int btstack_main(int argc, const char * argv[]);
 
-// main
-int mgos_mongoose_os_lib_btstack_init(void){
+/// main
+void btstack_init(void *arg) {
 
     printf("BTstack: setup\n");
 
@@ -382,6 +382,11 @@ int mgos_mongoose_os_lib_btstack_init(void){
 
     printf("BTstack: execute run loop\n");
     btstack_run_loop_execute();
-    return 0;
 }
 
+// main
+bool mgos_mongoose_os_lib_btstack_init(void) {
+    printf("BTstack: running init in different task\n");
+    xTaskCreate(btstack_init, "BTstack init", 4096, NULL, 12, NULL);
+    return true;
+}
